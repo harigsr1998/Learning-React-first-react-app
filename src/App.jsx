@@ -10,6 +10,7 @@ import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
+import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
   // Add new job
@@ -24,10 +25,22 @@ const App = () => {
     return;
   }
 
-  // Delete new job
+  // Delete job
   const deleteJob = async (id) => {
     const res = await fetch(`/api/jobs/${id}`, {
       method: 'DELETE'
+    } );
+    return;
+  }
+
+  // Update job
+  const updateJob = async (updatedJob) => {
+    const res = await fetch(`/api/jobs/${updatedJob.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedJob)
     } );
     return;
   }
@@ -40,6 +53,7 @@ const App = () => {
       <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
       <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
                       {/* ↑ ':' in :id represents that it is dynamic. It is a parameter that can be accessed using useParams() hook and by the params object passed on to the loader */}
+      <Route path="/edit-job/:id" element={<EditJobPage updateJobSubmit={updateJob} />} loader={jobLoader} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
     )
