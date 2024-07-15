@@ -35,13 +35,13 @@ const Navbar = () => {
                   Home
                 </NavLink>
                 <NavLink
-                  to="/Learning-React-first-react-appjobs/"
+                  to="/Learning-React-first-react-app/jobs/"
                   className={linkClass}
                 >
                   Jobs
                 </NavLink>
                 <NavLink
-                  to="/Learning-React-first-react-appadd-job/"
+                  to="/Learning-React-first-react-app/add-job/"
                   className={linkClass}
                 >
                   Add Job
