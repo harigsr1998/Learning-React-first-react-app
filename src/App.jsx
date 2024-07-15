@@ -47,13 +47,13 @@ const App = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-    <Route path="/" element={<MainLayout />}>
+    <Route path="/Learning-React-first-react-app/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
-      <Route path="/jobs" element={<JobsPage />} />
-      <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
-      <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
+      <Route path="/Learning-React-first-react-app/jobs" element={<JobsPage />} />
+      <Route path="/Learning-React-first-react-app/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
+      <Route path="/Learning-React-first-react-app/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
                       {/* ↑ ':' in :id represents that it is dynamic. It is a parameter that can be accessed using useParams() hook and by the params object passed on to the loader */}
-      <Route path="/edit-job/:id" element={<EditJobPage updateJobSubmit={updateJob} />} loader={jobLoader} />
+      <Route path="/Learning-React-first-react-app/edit-job/:id" element={<EditJobPage updateJobSubmit={updateJob} />} loader={jobLoader} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
     )
