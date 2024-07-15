@@ -15,7 +15,7 @@ const Navbar = () => {
             className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
           >
             {/* Logo */}
-            <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
+            <NavLink className="flex flex-shrink-0 items-center mr-4" to="/Learning-React-first-react-app/">
               <img
                 className="h-10 w-auto"
                 src={logo}
@@ -29,19 +29,19 @@ const Navbar = () => {
             <div className="md:ml-auto">
               <div className="flex space-x-2">
                 <NavLink
-                  to="/"
+                  to="/Learning-React-first-react-app/"
                   className={linkClass}
                 >
                   Home
                 </NavLink>
                 <NavLink
-                  to="/jobs"
+                  to="/Learning-React-first-react-appjobs/"
                   className={linkClass}
                 >
                   Jobs
                 </NavLink>
                 <NavLink
-                  to="/add-job"
+                  to="/Learning-React-first-react-appadd-job/"
                   className={linkClass}
                 >
                   Add Job
