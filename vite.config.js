@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',        // Proxy is used so instead of changing backend target
+        target: 'https://harigsr1998.github.io/Learning-React-first-react-app-data/jobs.json',        // Proxy is used so instead of changing backend target
         changeOrigin: true,                     // URL everywhere it only needs to be changed here
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
