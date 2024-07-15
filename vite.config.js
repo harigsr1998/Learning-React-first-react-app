@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://harigsr1998.github.io/Learning-React-first-react-app-data/jobs.json',        // Proxy is used so instead of changing backend target
+        target: 'https://api.jsonsilo.com/public/a699039a-d2a2-4259-99d2-ee448c52093f',        // Proxy is used so instead of changing backend target
         changeOrigin: true,                     // URL everywhere it only needs to be changed here
         rewrite: (path) => path.replace(/^\/api/, ''),
       }
